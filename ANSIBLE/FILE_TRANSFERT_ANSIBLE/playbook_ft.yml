@@ -1,0 +1,13 @@
+---
+- name: "[Nom_du_playbook]"
+  hosts: all
+  tasks:
+    - name: "[Nom_de_la_task] - copie du fichier"
+      copy:
+        src: /etc/.../destionation_source.sh
+        dest: /etc/.../destination_files.sh
+
+
+ ##COMMANDE##
+#ansible-playbook -i hosts.yml  --user=root playbook_ft.yml
+#fichier à mettre dans le master ansible dans /etc/ansible/playbook_ft.yml
