@@ -1,0 +1,13 @@
+---
+- name: "[MAJ EMAIL]"
+  hosts: all
+  tasks:
+
+    - name: Recuperation de l'ancienne version de email
+      shell: cd /home/dqe/email && cp -pr ../email.old/* .
+
+    - name: "Changement / vérification des permissions de fichiers de email"
+      shell: cd /home/dqe/email/ && chown -R dqe:dqe *
+
+    - name: "relance du service email"
+      shell: cd /var/dqe/scripts/ && ./restart_email.sh
