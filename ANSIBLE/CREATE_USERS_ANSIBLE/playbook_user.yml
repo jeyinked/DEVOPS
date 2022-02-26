@@ -1,0 +1,29 @@
+---
+- name: nom_du_playbook
+  hosts: all
+  become: yes
+  tasks:
+  - name: "[nom_de_la_task]"
+    user:
+      name: nom_du_user
+      state: present
+#     groups: 
+#     uid:
+#     gid:
+      generate_ssh_key: yes
+      password: "{{ 'password' | password_hash('sha512') }}"
+
+    register: __user_nom_du_user
+  - name: debug user
+    debug:
+      var: __user_nom_du_user
+  
+#  - name: remove user
+#    user:
+#      name: nom_du_user
+#      state: absent
+
+ ##Commande
+#ansible-playbook -i hosts.yml  --user=root playbook_user.yml
+#Fichier à mettre sur le master ansible dans /etc/ansible/playbook_user.yml
+
