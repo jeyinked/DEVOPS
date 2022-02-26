@@ -1,0 +1,93 @@
+---
+- name: Administration windows server
+  hosts: WIN
+
+  tasks:
+
+#####################CREATION ARBORESCENCE FICHIER######################                                                                                                ###############
+
+  -  name: Creation des repertoires
+     win_file:
+      path: C:\Temp\dqe\benoit\jerome\ansible\
+      state: directory
+#     state: abse,t #pour effacer#
+
+  -  name: creation du fichier
+     win_file:
+      path: C:\Temp\dqe\benoit\jerome\ansible\ansible.txt
+      state: touch
+#     state: absent #pour effacer#
+
+#####################CREATION UTILISATEUR###############################                                                                                                #############
+
+  -  name: Creation d'utilisateur windows
+     win_user:
+       name: benoit
+       password: Dqe2022!25!
+       state: present
+#      state: absent #supprimer l'utilisateur#
+       groups:
+         - Users
+
+###################TRANSFERT DE FICHIER#################################                                                                                                ############
+
+  -  name: transfert de fichier
+     win_copy:
+       src: ./dqe.conf
+       dest: C:\Temp\dqe.conf
+
+
+  -  name: transfert de fichier
+     win_copy:
+       src: /etc/ansible/maj_elfy/elfy
+       dest: C:\Temp\
+
+####################REDEMMARER SERVICES#################################                                                                                                #########
+root@vps-ec397381:/etc/ansible/maj_elfy# nano  win.yml
+root@vps-ec397381:/etc/ansible/maj_elfy#
+root@vps-ec397381:/etc/ansible/maj_elfy# cat win.yml
+---
+- name: Administration windows server
+  hosts: WIN
+
+  tasks:
+
+#####################CREATION ARBORESCENCE FICHIER#####################################
+
+  -  name: Creation des repertoires
+     win_file:
+      path: C:\Temp\dqe\benoit\jerome\ansible\
+      state: directory
+#     state: abse,t #pour effacer#
+
+  -  name: creation du fichier
+     win_file:
+      path: C:\Temp\dqe\benoit\jerome\ansible\ansible.txt
+      state: touch
+#     state: absent #pour effacer#
+
+#####################CREATION UTILISATEUR############################################
+
+  -  name: Creation d'utilisateur windows
+     win_user:
+       name: benoit
+       password: Dqe2022!25!
+       state: present
+#      state: absent #supprimer l'utilisateur#
+       groups:
+         - Users
+
+###################TRANSFERT DE FICHIER#############################################
+
+  -  name: transfert de fichier
+     win_copy:
+       src: ./dqe.conf
+       dest: C:\Temp\dqe.conf
+
+
+  -  name: transfert de fichier
+     win_copy:
+       src: /etc/ansible/maj_elfy/elfy
+       dest: C:\Temp\
+
+####################REDEMMARER SERVICES##########################################
