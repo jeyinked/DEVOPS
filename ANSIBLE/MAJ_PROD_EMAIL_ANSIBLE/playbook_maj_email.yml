@@ -12,7 +12,7 @@
 
     - name: "Copie de la nouvelle version de email"
       copy:
-        src=/etc/ansible/maj_email/maj_email/email/
+        src=/etc/ansible/maj_email/email_new/
         dest=/home/dqe/email/
 
     - name: "Changement / vérification des permissions des fichiers de email"
