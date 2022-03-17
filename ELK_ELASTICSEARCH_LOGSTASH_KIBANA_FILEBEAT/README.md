@@ -15,7 +15,9 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
 
 # LE PACKAGE
 
-  * 
+  * Le fichier de configuration Elasticsearch, elasticsearch.yml.
+  * Le fichier de configuartion de KIBANA, kibana.yml.
+  * Le fichier de configuration de filebeat, filebeat.yml. 
 
 # ETAPES
  
