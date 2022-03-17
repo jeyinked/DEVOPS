@@ -13,7 +13,7 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
 
   * Un serveur linux de type debian (ubuntu..)
   * installer curl ( apt-get install curl)
-  * installer nginx (apt-get install nginx ; systemctl start nginx)
+  * installer nginx (apt-get install nginx ; systemctl start nginx ; curl 127.0.0.1)
 
 # LE PACKAGE
 
@@ -66,5 +66,23 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
 
  __4)__  __INSTALLATION & CONFIGURATION DE FIREBEAT__
  
-   *  
+   *  wget --directory-prefix=/opt/ https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+   *  cd /opt/ && dpkg -i filebeat-7.6.1-amd64.deb
+   *  systemctl enable filebeat
+   *  systemctl start logstash
+   *  systemctl status filebeat 
+   *  cp -pr /etc/filebeat/filebeat.yml filebeat.yml.backup
+   *  nano /etc/filebeat/filebeat.yml
+   *  Dans la partie KIBANA changer #host: "localhost:5601" pour host: "ip_du_serveur:5601"
+   *  Dans la partie ELASTICSEARCH hosts: ["localhost:9200"] pour hosts: ["ip_du_serveur:9200"]
+   *  filebeat modules list
+   *  filebeat modules enable nginx
+   *  filebeat setup
+   *  Sur le navigateur web taper l'ip_du_serveur:5601, l'interface de Kibana doit s'afficher.
+   *  cliquer en bas a gauche sur la petite flèche puis management, kibana index patterns, create index pattern, indiquer filebeat-* faire suivant/valider.
+   *  cliquer sur la boussole en haut à gauche (discover) pour voir le graphique des logs Nginx.
+   
+   __5)__ __CHANGER LE PATH DES LOGS DANS FILEBEAT__
+   
+
   
