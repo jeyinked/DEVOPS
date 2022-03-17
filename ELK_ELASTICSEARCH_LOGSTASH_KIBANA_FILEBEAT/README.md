@@ -12,6 +12,7 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
 # LES PREREQUIS MINIMAL
 
   * Un serveur linux de type debian (ubuntu..)
+  * installer curl ( apt-get install curl)
 
 # LE PACKAGE
 
@@ -21,7 +22,23 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
 
 # ETAPES
  
- __1)__ 
+ __1)__ __INSTALLATION DE ELASTICSEARCH 7.6.1__  
+ 
+   *  wget --directory-prefix=/opt/ https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.6.1-amd64.deb
+   *  cd /opt/ && dpkg -i elasticsearch-7.6.1-amd64.deb
+   *  cd /etc/elasticsearch/ && cp -pr jvm.options jvm.options.backup
+   *  cd /etc/elasticsearch/ && nano jvm.options, -changer Xms1g en Xms512m et -changer Xmx1g en Xmx512m.
+   *  cp elasticsearch.yml elasticsearch.yml.backup
+   *  nano /etc/elasticsearch/elasticsearch.yml 
+   *  Decommenter #node.name: node-1 en node.name: node-1
+   *  changer #network.host: 192.168.0.1 en network.host: 0.0.0.0
+   *  changer #discovery.seed_hosts: [""], [""] en discovery.seed_hosts: ["ip_du_serveur", "127.0.0.1"]
+   *  changer #cluster.initial_master_nodes: ["node-1", "node-2"] en cluster.initial_master_nodes: ["node-1"] 
+   *  systemctl enable elasticsearch
+   *  systemctl start elasticsearch
+   *  aire un test avec curl ip_du_serveur:9200
+
+
  
  __2)__
 
