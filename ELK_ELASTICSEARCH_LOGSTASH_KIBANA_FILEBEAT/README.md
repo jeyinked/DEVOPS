@@ -7,18 +7,20 @@ Elasticsearch est le serveur de recherche le plus populaire chez les professionn
 
 # CONTEXT
 
-Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'apporter une solution de centralisation ( capture, injection, filtre, études) de logs de serveurs web, de type NGINX.
+Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'apporter une solution de centralisation ( captures, injections, filtres, supervison) de logs de serveurs web, de type NGINX.
 
 # LES PREREQUIS MINIMAL
 
   * Un serveur linux de type debian (ubuntu..)
   * installer curl ( apt-get install curl)
+  * installer nginx (apt-get install nginx ; systemctl start nginx)
 
 # LE PACKAGE
 
   * Le fichier de configuration Elasticsearch, elasticsearch.yml.
   * Le fichier de configuartion de KIBANA, kibana.yml.
   * Le fichier de configuration de filebeat, filebeat.yml. 
+  * le module filebeat nginx
 
 # ETAPES
  
@@ -40,9 +42,29 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
 
 
  
- __2)__ __KIBANA__
-
- __3)__  __LOGSTASH__
+ __2)__ __INSTALLATION DE KIBANA 7.6.1__
+   
+   *  get --directory-prefix=/opt/ https://artifacts.elastic.co/downloads/kibana/kibana-7.6.1-amd64.deb
+   *  cd /opt/ && dpkg -i kibana-7.6.1-amd64.deb
+   *  cd /etc/kibana/ && cp -pr kibana.yml kibana.yml.backup
+   *  nano /etc/kibana/kibana.yml et changer #server.host: "localhost" en server.host: "0.0.0.0"
+   *  systemctl enable kibana
+   *  systemctl start kibana
+   *  systemctl status kibana
+   *  Dans un navigateur web faire un ip_du_serveur:5601
+ 
+ __3)__  __INSTALLATION DE LOGSTASH 7.6.1__
+ 
+   * apt-get update && apt-get upgrade
+   * apt-get install default-jre default-jdk
+   * wget --directory-prefix=/opt/ https://artifacts.elastic.co/downloads/logstash/logstash-7.6.1.deb 
+   * cd /opt/ && dpkg -i logstash-7.6.1.deb
+   * systemctl enable logstash
+   * systemctl start logstash
+   * systemctl status logstash
+   * cp -pr /etc/logstash/logstash.yml logstash.yml.backup
 
  __4)__  __FIREBEAT__
+ 
+   *  
   
