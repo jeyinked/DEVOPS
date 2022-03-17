@@ -36,7 +36,7 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
    *  changer #cluster.initial_master_nodes: ["node-1", "node-2"] en cluster.initial_master_nodes: ["node-1"] 
    *  systemctl enable elasticsearch
    *  systemctl start elasticsearch
-   *  aire un test avec curl ip_du_serveur:9200
+   *  Faire un test avec curl ip_du_serveur:9200
 
 
  
