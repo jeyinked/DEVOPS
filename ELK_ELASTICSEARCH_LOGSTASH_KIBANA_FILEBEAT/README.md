@@ -24,7 +24,7 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
 
 # ETAPES
  
- __1)__ __INSTALLATION DE ELASTICSEARCH 7.6.1__  
+ __1)__ __INSTALLATION & CONFIGURATION DE ELASTICSEARCH 7.6.1__  
  
    *  wget --directory-prefix=/opt/ https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.6.1-amd64.deb
    *  cd /opt/ && dpkg -i elasticsearch-7.6.1-amd64.deb
@@ -42,7 +42,7 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
 
 
  
- __2)__ __INSTALLATION DE KIBANA 7.6.1__
+ __2)__ __INSTALLATION & CONFIGURATION DE KIBANA 7.6.1__
    
    *  get --directory-prefix=/opt/ https://artifacts.elastic.co/downloads/kibana/kibana-7.6.1-amd64.deb
    *  cd /opt/ && dpkg -i kibana-7.6.1-amd64.deb
@@ -53,7 +53,7 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
    *  systemctl status kibana
    *  Dans un navigateur web faire un ip_du_serveur:5601
  
- __3)__  __INSTALLATION DE LOGSTASH 7.6.1__
+ __3)__  __INSTALLATION & CONFIGURATION DE LOGSTASH 7.6.1__
  
    * apt-get update && apt-get upgrade
    * apt-get install default-jre default-jdk
@@ -64,7 +64,7 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
    * systemctl status logstash
    * cp -pr /etc/logstash/logstash.yml logstash.yml.backup
 
- __4)__  __FIREBEAT__
+ __4)__  __INSTALLATION & CONFIGURATION DE FIREBEAT__
  
    *  
   
