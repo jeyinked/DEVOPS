@@ -29,7 +29,9 @@ __2)__ __INSTALLATION DE GRAFANA__
    * echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
    * apt-get update 
    * apt-get install grafana 
-   * demmarrer le service avec la commande /etc/init.d/grafana start
-   * verifier avec systemctl status grafana.server
-   * le fichier de configuration de grafana se trouve dans /etc/grafana/grafana.ini
-   *  Dans un navigateur web mettre l'ip_du_serveur:3000 (le port par default de grafana est 3000)
+   * demmarrer le service avec la commande /etc/init.d/grafana start.
+   * verifier avec systemctl status grafana.server.
+   * le fichier de configuration de grafana se trouve dans /etc/grafana/grafana.ini.
+   * Dans un navigateur web mettre l'ip_du_serveur:3000 (le port par default de grafana est 3000).
+ 
+# L'INTERFACE DE GRAFANA
