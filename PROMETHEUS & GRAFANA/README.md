@@ -10,7 +10,6 @@ Grafana est un logiciel libre sous licence GNU Affero General Public License Ver
 # LES PREREQUIS MINIMAL
 
   * Un serveur linux de type debian (ubuntu..).
-  * installer curl ( apt-get install curl).
 
 # ETAPES
  
