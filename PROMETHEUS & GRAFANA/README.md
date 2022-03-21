@@ -43,3 +43,8 @@ __2)__ __INSTALLATION DE GRAFANA__
    * cliquer sur __data source__ et choisir la data source prometheus.
    * dans __Metric browser__ chercher __node_arp_entries__ pour, par exemple, voir les requetes __ARP__.
    * pour changer de mode de graph, __tout en haut à droit cliquer sur time series et choisir le mode de graph souhaité__.
+
+
+# L'INTERFACE DE PROMETHEUS
+
+   * Dans une navigateur web mettre __ip_du_server:9090__
