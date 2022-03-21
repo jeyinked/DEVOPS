@@ -14,14 +14,14 @@ Grafana est un logiciel libre sous licence GNU Affero General Public License Ver
 
 # ETAPES
  
- __1)__ __INSTALLATION DE PROMETHEUS  
+ __1)__ __INSTALLATION DE PROMETHEUS__ 
    
    * apt-get update && apt-get upgrade 
    * apt-get install prometheus
    * le fichier de configuration se trouve dans /etc/prometheus/prometheus.yml
    * Dans un navigateur web mettre l'ip_du_serveur:9090 (le port pazr default de prometheus est 9090)
    * 
-__2)__ __INSTALLATION DE GRAFANA
+__2)__ __INSTALLATION DE GRAFANA__
    
    * apt-get install -y apt-transport-https
    * apt-get install -y software-properties-common wget
