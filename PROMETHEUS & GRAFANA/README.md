@@ -40,5 +40,7 @@ __2)__ __INSTALLATION DE GRAFANA__
    * le login et le mot de passe par default est "admin" "admin".
    * dans la barre de gauche, cliquer sur configuration et choisir "data sources" puis add data source. La page affiche toutes les datas sources disponible, pour l'exemple, choisir prometheus.
    * Une nouvelle page s'affiche, ici, on configure la data source, dans http, dans URL, mettre http://localhost:9090 (qui est le port par default de prometheus) et cliquer sur save & test.
-   * 
-   *
+   * Cliquer sur dashboard puis, create you first dashboard puis add new panel.
+   * cliquer sur data source et choisir la data source prometheus.
+   * dans Metric browser chercher node_arp_entrier pour, par exemple, voir les requetes ARP.
+   * pour changer de mode de graph, tout en haut à droit cliquer sur time series et choisir le mode de graph souhaité.
