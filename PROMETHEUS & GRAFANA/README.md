@@ -36,11 +36,11 @@ __2)__ __INSTALLATION DE GRAFANA__
  
 # L'INTERFACE DE GRAFANA
 
-   * Dans une navigateur web mettre ip_du_server:3000
-   * le login et le mot de passe par default est "admin" "admin".
-   * dans la barre de gauche, cliquer sur configuration et choisir "data sources" puis add data source. La page affiche toutes les datas sources disponible, pour l'exemple, choisir prometheus.
-   * Une nouvelle page s'affiche, ici, on configure la data source, dans http, dans URL, mettre http://localhost:9090 (qui est le port par default de prometheus) et cliquer sur save & test.
-   * Cliquer sur dashboard puis, create you first dashboard puis add new panel.
-   * cliquer sur data source et choisir la data source prometheus.
-   * dans Metric browser chercher node_arp_entrier pour, par exemple, voir les requetes ARP.
-   * pour changer de mode de graph, tout en haut à droit cliquer sur time series et choisir le mode de graph souhaité.
+   * Dans une navigateur web mettre __ip_du_server:3000__
+   * le login et __le mot de passe par default est "admin" "admin"__.
+   * dans la barre de gauche, cliquer sur __configuration__ et choisir "__data sources__" puis "__add data source__". La page affiche toutes les datas sources disponible, pour l'exemple, choisir __prometheus__.
+   * Une nouvelle page s'affiche, ici, on configure la __data source__, dans __http, dans URL, mettre http://localhost:9090 (qui est le port par default de prometheus) et cliquer sur save & test__.
+   * Cliquer sur __dashboard__ puis, create you __first dashboard__ puis __add new panel__.
+   * cliquer sur __data source__ et choisir la data source prometheus.
+   * dans __Metric browser__ chercher __node_arp_entries__ pour, par exemple, voir les requetes __ARP__.
+   * pour changer de mode de graph, __tout en haut à droit cliquer sur time series et choisir le mode de graph souhaité__.
