@@ -35,3 +35,10 @@ __2)__ __INSTALLATION DE GRAFANA__
    * Dans un navigateur web mettre l'ip_du_serveur:3000 (le port par default de grafana est 3000).
  
 # L'INTERFACE DE GRAFANA
+
+   * Dans une navigateur web mettre ip_du_server:3000
+   * le login et le mot de passe par default est "admin" "admin".
+   * dans la barre de gauche, cliquer sur configuration et choisir "data sources" puis add data source. La page affiche toutes les datas sources disponible, pour l'exemple, choisir prometheus.
+   * Une nouvelle page s'affiche, ici, on configure la data source, dans http, dans URL, mettre http://localhost:9090 (qui est le port par default de prometheus) et cliquer sur save & test.
+   * 
+   *
