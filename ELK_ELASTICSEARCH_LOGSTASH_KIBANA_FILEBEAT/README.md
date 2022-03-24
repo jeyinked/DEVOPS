@@ -44,7 +44,7 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
  
  __2)__ __INSTALLATION & CONFIGURATION DE KIBANA 7.6.1__
    
-   *  get --directory-prefix=/opt/ https://artifacts.elastic.co/downloads/kibana/kibana-7.6.1-amd64.deb
+   *  wget --directory-prefix=/opt/ https://artifacts.elastic.co/downloads/kibana/kibana-7.6.1-amd64.deb
    *  cd /opt/ && dpkg -i kibana-7.6.1-amd64.deb
    *  cd /etc/kibana/ && cp -pr kibana.yml kibana.yml.backup
    *  nano /etc/kibana/kibana.yml et changer #server.host: "localhost" en server.host: "0.0.0.0"
