@@ -1,0 +1,38 @@
+---
+- name: "[MAJ SINGLEV3]"
+  hosts: [SINGLEV3]
+  tasks:
+
+ #   - name: Suppression de singlev3.old
+ #     shell: cd /home/dqe/singlev3.old/ && rm -rf * 
+    
+ #   - name: Backup de singlev3 dans singlev3.old
+ #     shell: cd /home/dqe/singlev3.old/ && cp -pr ../singlev3/* .
+
+
+ #   - name: "Changement / vérification des permissions des fichiers de singlev3.old"
+ #     shell: cd /home/dqe/singlev3.old/ && chown -R dqe:dqe *
+
+ #    - name: "Copie de la nouvelle version de singlev3"
+ #     copy:
+ #       src=/etc/ansible/maj_singlev3/singlev3.new/singlev3/
+ #       dest=/home/dqe/
+
+
+ #  - name: "Generation des bases JPN"
+ #     shell: cd /home/dqe/singlev3/ && python3 parse.py JPN
+
+    
+
+ #   - name: "indexation de la BDD JPN"
+ #    shell: redis-cli 'swapdb 01'
+
+
+    - name: "reboot le service JPN"
+#      become: yes
+#      become_user: dqe
+      shell: python3 /home/dqe/singlev3/server.py JPN 5760 51.178.63.198 &
+
+
+
+
