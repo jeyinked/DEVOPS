@@ -1,0 +1,17 @@
+---
+- name: "[MAJ CEGID]"
+  hosts: [CEGID]
+  user: dqe
+  tasks:
+
+    - name: "Copie de l'ancienne version de cegid.old  dans cegid1 "     
+      shell: cd /home/dqe/cegid1/ && cp -pr ../cegid.old/* .
+   
+    - name: "changement / vérification du proprietaire de fichier DQE:DQE de cegid1"
+      shell: cd /home/dqe/ && chown -R dqe:dqe ./cegid1/
+    
+    - name: "redemarrer le service cegid"
+      shell: cd /var/dqe/scripts/ && ./restart_srv_cegid.sh
+    
+
+

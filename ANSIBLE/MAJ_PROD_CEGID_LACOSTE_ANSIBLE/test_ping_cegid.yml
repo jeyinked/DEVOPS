@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ansible all -i host_cegid.yml --user=dqe -m "ping" 

@@ -1,0 +1,32 @@
+---
+- name: "[MAJ CEGID]"
+  hosts: [CEGID]
+  user: dqe
+  tasks:
+
+    - name: Backup de cegid
+      shell: cd /home/dqe/cegid.old/ && cp -pr ../cegid1/* . 
+
+    - name: "changement / vérification du proprietaire de fichier DQE:DQE de cegid.old"
+      shell: cd /home/dqe/ && chown -R dqe:dqe ./cegid.old/
+
+    - name: "Copie de la nouvelle version de cegid"
+      copy:
+        src=/etc/ansible/maj_cegid/cegid.new/cegid.new/
+        dest=/home/dqe/cegid.new/
+
+    - name: "suppression des .cfg dans cegid.new "     
+      shell: cd /home/dqe/cegid.new/ && rm *.cfg
+   
+    - name: "copie des fichiers de cegid.new à lacoste"
+      shell: cd /home/dqe/lacoste/ && cp -pr ../cegid.new/* .
+
+    - name: "changement / vérification du proprietaire de fichier DQE:DQE de cegid1"
+      shell: cd /home/dqe/ && chown -R dqe:dqe ./lacoste/
+ 
+    
+    - name: "redemarrer le service cegid"
+      shell: cd /var/dqe/scripts/ && ./restart_srv_cegid.sh
+    
+
+
