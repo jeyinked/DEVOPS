@@ -12,19 +12,14 @@
     - name: Modification du .new 
       shell: cd /home/dqe/email/conf/ && sed s/ip_redis=old_ipd_server/ip_redis=new_ip_server/ <ServerDQE_Tornado.cfg >ServerDQE_Tornado.cfg.new  
 
+    - name: Vérification users/groups 
+      shell: cd /home/dqe/email && chown -R dqe:dqe * 
 
+    - name: Mettre en prod la nouvelle configuration de redis
+      shell: cd /home/dqe/email/conf && cp -pr ServerDQE_Tornado.cfg.new ServerDQE_Tornado.cfg  
 
-
-#    - name: Vérification users/groups
-#      shell: cd /home/dqe/email && chown -R dqe:dqe * 
-
-
-#    - name: Mettre en prod la nouvelle configuration de redis
-#      shell: cd /home/dqe/email/conf && cp -pr ServerDQE_Tornado.cfg.new ServerDQE_Tornado.cfg  
-
-
-#    - name: Reboot service
-#      shell: cd /var/dqe/scripts/ && ./restart_srv_email.sh   
+    - name: Reboot service
+      shell: cd /var/dqe/scripts/ && ./restart_srv_email.sh   
 
    
 
