@@ -12,7 +12,28 @@ Dans le cadre de ma veille technologique et de pouvoir monter en compétence sur
 
 # LES PREREQUIS MINIMAL
 
-  * Un serveur Linux ( Debian, ubuntu
+  * Un serveur Linux ( Debian, ubuntu ).
+  
+  
+
+# INSTALLATION 
+
+Se rendre sur https://www.jenkins.io/ 
+
+sur le serveur: 
+
+ curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
+    /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+    
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+    
+    
+  sudo apt-get update  
+  sudo apt-get install fontconfig openjdk-11-jre  
+  sudo apt-get install jenkins
+
  
  
 
