@@ -32,8 +32,14 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
     
   sudo apt-get update  
   sudo apt-get install fontconfig openjdk-11-jre  
-  sudo apt-get install jenkins
-
- 
+  sudo apt-get install jenkins  
+  
+  Jenkins va generer une clé pour l'activer qui se trouve dans  
+  /var/lib/jenkins/secrets/initialAdminPassword
+  
+  Le mot de passe en question qu'il faudra rentrer dans un navigateur web pour activer Jenkins.  
+  Vérifier que jenkins est bien actif sur la machine avec un systemctl status jenkins.
+  Dans un navigateur web, faire un 127.0.0.1:8080 (le port de jenkins par default est 8080).  
+  Une page s'affiche qui vous confirme que jenkins est activé et qui vous demande le mot de passe (qui se trouve dans  /var/lib/jenkins/secrets/initialAdminPassword).
  
 
