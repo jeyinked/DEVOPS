@@ -45,6 +45,6 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   Cliquer sur "Installer les plugins suggérés"  
   
   # CREATION PREMIER UTILISATEUR ADMINISTRATEUR  
-  Le nom d'utilisateur, le mot de pass, la confirmation du mot de passe, le nom complet et l'adresse courriel vous sera demandé.
+  Le nom d'utilisateur, le mot de passe, la confirmation du mot de passe, le nom complet et l'adresse courriel vous sera demandé.
  
 
