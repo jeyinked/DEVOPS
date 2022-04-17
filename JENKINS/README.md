@@ -40,7 +40,11 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   Le mot de passe en question qu'il faudra rentrer dans un navigateur web pour activer Jenkins.  
   Vérifier que jenkins est bien actif sur la machine avec un systemctl status jenkins.
   Dans un navigateur web, faire un 127.0.0.1:8080 (le port de jenkins par default est 8080).  
+  
   Une page s'affiche qui vous confirme que jenkins est activé et qui vous demande le mot de passe (qui se trouve dans  /var/lib/jenkins/secrets/initialAdminPassword).  
-  Cliquer sur "Installer les plugins suggérés"
+  Cliquer sur "Installer les plugins suggérés"  
+  
+  # CREATION PREMIER UTILISATEUR ADMINISTRATEUR  
+    Le nom d'utilisateur, le mot de pass, la confirmation du mot de passe, le nom complet et l'adresse courriel vous sera demandé.
  
 
