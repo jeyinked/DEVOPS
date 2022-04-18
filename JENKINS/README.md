@@ -48,3 +48,6 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   Le nom d'utilisateur, le mot de passe, la confirmation du mot de passe, le nom complet et l'adresse courriel vous sera demandé.
  
   # UTILISATEURS ET ROLES
+  
+  Sur le tableau de bord -> Administrer Jenkins -> Gérer les utilisateurs -> Créer un utilisateur  
+  Rentrer son nom d'utilisateur, le mot de passe, la confirmation, le nom complet, l'adresse courriel et cliquer sur créer un utilisateur.
