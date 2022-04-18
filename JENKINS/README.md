@@ -75,8 +75,12 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
     Reproduire la même étape avec un job2 et un script shell echo "test ok" -> sauver.  
     Sur le tableau de bord -> Cliquer sur la petite fleche  -> Configurer -> Ce qui déclenche le Build -> construire après le build sur d'autres projets -> projet à surveiller -> mettre le nom du premier job donc dans l'exemple "job1" -> sauver.  
     
-  Sur le tableau de bord -> Lancer le job1 -> Cliquer sur job2 -> Dans historique des builds -> Cliquer sur sur le dernier build -> Sortie de la console -> vérifier que le job est ok et c'est bien lancé à partir du premier job. 
-    
+  Sur le tableau de bord -> Lancer le job1 -> Cliquer sur job2 -> Dans historique des builds -> Cliquer sur sur le dernier build -> Sortie de la console -> vérifier que le job est ok et c'est bien lancé à partir du premier job.  
+  
+  
+  Pour lancer le job avec une URL, sur le tableau de bord -> cliquer sur un job -> configuer -> Ce qui déclenche le Build -> Déclencher les builds à distance -> Choisir un token (Exemple: 1234) -> Sauver.  
+  Pour lancer le job à distance, lancer cette URL -> 127.0.0.1:8080/job/nom_du_job/build?token=token_choisis ( Exemple: 127.0.0.1:8080/job/job1/build?token=1234).
+  
     
     
     
