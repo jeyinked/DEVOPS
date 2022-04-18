@@ -46,6 +46,10 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   
   # CREATION PREMIER UTILISATEUR ADMINISTRATEUR  
   Le nom d'utilisateur, le mot de passe, la confirmation du mot de passe, le nom complet et l'adresse courriel vous sera demandé.
+  
+  # INSTALLATION DE PLUGINS
+  
+  Sur le tableau de bord -> Administrer Jenkins -> Gestions des plugins -> Disponible > chercher par exemple "Role-based Authorization strategy -> cocher la case et cliquer sur Télécharger maintenant et installer après le redémarrage.
  
   # UTILISATEURS ET ROLES
   
