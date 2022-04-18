@@ -65,3 +65,5 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   Pour assigner l'item roles à un utilisateur,  Sur le tableau de bord -> Administrer Jenkins -> Gérer et assigner les rôles -> Assigner les rôles -> Item roles -> Utilisateur/groupe à ajouter -> Mettre le nom de l'utilisateur souhaité et cliquer sur ajouter.  
   Pour finir cocher l'item role à associer à l'utilisateur ajouté.  
   L'utilisateur en question aura accès au job en question.
+  
+  
