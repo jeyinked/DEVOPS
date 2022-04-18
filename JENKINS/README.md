@@ -66,4 +66,6 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   Pour finir cocher l'item role à associer à l'utilisateur ajouté.  
   L'utilisateur en question aura accès au job en question.
   
+   # JOBS et URL JOB
+  
   
