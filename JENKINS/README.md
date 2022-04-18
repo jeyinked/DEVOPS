@@ -66,7 +66,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   Pour finir cocher l'item role à associer à l'utilisateur ajouté.  
   L'utilisateur en question aura accès au job en question.
   
-   # JOBS et URL JOB  
+   # JOBS et URL JOBS
    
    On peut lancer plusieurs jobs de façon imbriqué les un des autres.
    La première étape et de crée plusieurs jobs (pour l'exemple 2 jobs, job1 et job2).  
