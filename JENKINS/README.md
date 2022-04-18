@@ -56,3 +56,10 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   
   Sur le tableau de bord -> Administrer Jenkins -> Gérer les utilisateurs -> Créer un utilisateur  
   Rentrer son nom d'utilisateur, le mot de passe, la confirmation, le nom complet, l'adresse courriel et cliquer sur créer un utilisateur.
+  
+  # CONFIGURATION DU PROFIL DE L'UTILISATEUR  
+  Sur le tableau de bord -> Administrer Jenkins -> Gérer et assigner les rôles -> Gérer les rôles -> dans Rôle à ajouter -> indique le nom d'un rôle, Ex: "DEV" -> et cocher les permissions souhaités (add).  
+  Dans la section "Item roles" -> Rôle à ajouter, indiquer le nom du projet, Ex: python.  
+  Toujours dans la section Item roles -> Patron -> indiquer le nom autoriser pour l'autorisation sur les job, Ex: Python.* ( tout ce qui comment par python.) puis cliquer sur ajouter. Cocher les autorisations souhaité et enregistrer.
+  
+  
