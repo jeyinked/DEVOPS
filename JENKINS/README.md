@@ -47,4 +47,4 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   # CREATION PREMIER UTILISATEUR ADMINISTRATEUR  
   Le nom d'utilisateur, le mot de passe, la confirmation du mot de passe, le nom complet et l'adresse courriel vous sera demandé.
  
-
+  # UTILISATEURS ET ROLES
