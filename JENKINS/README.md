@@ -74,7 +74,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
     Dans buid -> Exécuter un script shell -> echo "hello world" -> sauver.  
     Reproduire la même étape avec un job2 et un script shell echo "test ok" -> sauver.  
     Sur le tableau de bord -> Cliquer sur la petite fleche  -> Configurer -> Ce qui déclenche le Build -> construire après le build sur d'autres projets -> projet à surveiller -> mettre le nom du premier job donc dans l'exemple "job1" -> sauver. 
-    Sur le tableau de bord -> Lancer le job1 -> Cliquer sur job2 -> Dans historique des builds -> Cliquer sur sur le dernier build -> Sortie de la console -> vérifier que le job est ok et c'est bien lancé à partir du premier job.  
+    Sur le tableau de bord -> Lancer le job1 -> Cliquer sur job2 -> Dans historique des builds -> Cliquer sur sur le dernier build -> Sortie de la console -> vérifier que le job est ok et c'est bien lancé à partir du premier job. 
     
     
     
