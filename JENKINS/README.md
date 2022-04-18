@@ -49,7 +49,8 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   
   # INSTALLATION DE PLUGINS
   
-  Sur le tableau de bord -> Administrer Jenkins -> Gestions des plugins -> Disponible > chercher par exemple "Role-based Authorization strategy -> cocher la case et cliquer sur Télécharger maintenant et installer après le redémarrage.
+  Sur le tableau de bord -> Administrer Jenkins -> Gestions des plugins -> Disponible > chercher par exemple "Role-based Authorization strategy" -> cocher la case et cliquer sur Télécharger maintenant et installer après le redémarrage.  
+  Le plugins "Role-based Authorization strategy" permet d'administrer les utilisateurs par rôle, pour ce faire aller dans -> Administrer Jenkins -> Configurer la sécurité global -> Autorisations -> Cocher "Stratégie basée sur les rôles". 
  
   # UTILISATEURS ET ROLES
   
