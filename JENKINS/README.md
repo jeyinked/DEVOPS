@@ -60,6 +60,8 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   # CONFIGURATION DU PROFIL DE L'UTILISATEUR  
   Sur le tableau de bord -> Administrer Jenkins -> Gérer et assigner les rôles -> Gérer les rôles -> dans Rôle à ajouter -> indique le nom d'un rôle, Ex: "DEV" -> et cocher les permissions souhaités (add).  
   Dans la section "Item roles" -> Rôle à ajouter, indiquer le nom du projet, Ex: python.  
-  Toujours dans la section Item roles -> Patron -> indiquer le nom autorisé pour l'autorisation sur les job, Ex: Python.* ( tout ce qui commence par python.) puis cliquer sur ajouter. Cocher les autorisations souhaité et enregistrer.
+  Toujours dans la section Item roles -> Patron -> indiquer le nom autorisé pour l'autorisation sur les job, Ex: Python.* ( tout ce qui commence par python.) puis cliquer sur ajouter. Cocher les autorisations souhaité et enregistrer.  
   
-  
+  Pour assigner l'item roles à un utilisateur,  Sur le tableau de bord -> Administrer Jenkins -> Gérer et assigner les rôles -> Assigner les rôles -> Item roles -> Utilisateur/groupe à ajouter -> Mettre le nom de l'utilisateur souhaité et cliquer sur ajouter.  
+  Pour finir cocher l'item role à associer à l'utilisateur ajouté.  
+  L'utilisateur en question aura accès au job en question.
