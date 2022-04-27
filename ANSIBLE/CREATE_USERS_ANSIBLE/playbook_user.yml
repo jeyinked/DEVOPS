@@ -1,29 +1,27 @@
 ---
-- name: nom_du_playbook
-  hosts: all
+- name: creation user
+  hosts: [HOST]
   become: yes
+  vars:
+    name: nom_du_user
+    group: groupe_du_user
+    alias:  alias_du_user
   tasks:
-  - name: "[nom_de_la_task]"
-    user:
-      name: nom_du_user
-      state: present
-#     groups: 
-#     uid:
-#     gid:
+
+  - name: Create user
+    ansible.builtin.user:
+      name: "{{name}}"
+      group: "{{group}}"
+      shell: /bin/bash
       generate_ssh_key: yes
-      password: "{{ 'password' | password_hash('sha512') }}"
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
 
-    register: __user_nom_du_user
-  - name: debug user
-    debug:
-      var: __user_nom_du_user
-  
-#  - name: remove user
-#    user:
-#      name: nom_du_user
-#      state: absent
-
- ##Commande
-#ansible-playbook -i hosts.yml  --user=root playbook_user.yml
-#Fichier à mettre sur le master ansible dans /etc/ansible/playbook_user.yml
+  - name: Allow "{{alias}}"  to have passwordless sudo
+    lineinfile:
+      dest: /etc/sudoers
+      state: present
+      regexp: '^%{{alias}}'
+      line: '{{alias}} ALL=(ALL) NOPASSWD: ALL'
+      validate: 'visudo -cf %s'
 
