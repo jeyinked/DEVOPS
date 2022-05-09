@@ -64,7 +64,7 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
    * systemctl status logstash
    * cp -pr /etc/logstash/logstash.yml logstash.yml.backup
 
- __4)__  __INSTALLATION & CONFIGURATION DE FIREBEAT__
+ __4)__  __INSTALLATION & CONFIGURATION DE FILEBEAT__
  
    *  wget --directory-prefix=/opt/ https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
    *  cd /opt/ && dpkg -i filebeat-7.6.1-amd64.deb
