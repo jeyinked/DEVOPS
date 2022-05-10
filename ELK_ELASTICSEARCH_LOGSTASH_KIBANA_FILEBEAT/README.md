@@ -69,7 +69,7 @@ Dans le cade du passage de la certification iso 27001, j'ai eu comme projet d'ap
    *  wget --directory-prefix=/opt/ https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
    *  cd /opt/ && dpkg -i filebeat-7.6.1-amd64.deb
    *  systemctl enable filebeat
-   *  systemctl start logstash
+   *  systemctl start filebeat
    *  systemctl status filebeat 
    *  cp -pr /etc/filebeat/filebeat.yml filebeat.yml.backup
    *  nano /etc/filebeat/filebeat.yml
