@@ -1,0 +1,42 @@
+---
+- name: "[LOG EMAIL]"
+  hosts: [LOG]
+  vars:
+    path_log: /home/dqe/email/log/
+    path_extract: /home/jaguas/LOGS/
+    licence: N12rLW0J~92dZk.iBjatzVd.lz
+    date: 20220518
+  tasks:
+
+    - name: "copie du log dans /home/jaguas/LOGS"
+      shell: cd {{path_extract}} && cp -pr  {{path_log}}ficlog*.{{date}}.tgz .
+
+
+    - name: "pause 5scd"
+      pause:
+        seconds: 5
+
+    - name: "untar le log"
+      shell: cd {{path_extract}} && tar xzvf ficlog*.txt.{{date}}.tgz
+
+    - name: "pause 5scd"
+      pause:
+        seconds: 5
+
+    - name: "supression tgz"
+      shell: cd  {{path_extract}} && rm -rf *.tgz
+
+
+    - name: "extraction de la licence"
+      shell: cd {{path_extract}} && cat ficlog* | grep {{licence}} > {{licence}}_{{date}}.txt
+
+
+    - name: "supression des logs initial"
+      shell: cd {{path_extract}} && rm -rf ficlog*
+
+
+
+    - name: "importation de log mail de email3"
+      fetch:
+        src: /home/jaguas/LOGS/{{licence}}_{{date}}.txt
+        dest: /etc/ansible/extract_log_mail/LOGS/
