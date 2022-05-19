@@ -8,6 +8,10 @@
     date: 20220518
   tasks:
 
+    - name: "supression des anciens logs"
+      shell: cd {{path_extract}} && rm -rf *
+
+
     - name: "copie du log dans /home/jaguas/LOGS"
       shell: cd {{path_extract}} && cp -pr  {{path_log}}ficlog*.{{date}}.tgz .
 
