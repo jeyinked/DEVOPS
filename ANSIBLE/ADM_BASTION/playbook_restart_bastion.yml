@@ -1,0 +1,16 @@
+---
+- name: "[BASTION_ON]"
+  hosts: [HOST]
+  vars:
+  tasks:
+
+    - name: "effacer la clé jaguas de /home/jaguas/.ssh/authorized_keys"
+      shell: cd  /home/jaguas/.ssh/ && sed -i '/^ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAtL1/d' authorized_keys
+
+    - name: "desactiver la pubkeyauthentication de yes à no"
+      shell: cd /etc/ssh/ && sed -i 20,50"s/PubkeyAuthentication yes/PubkeyAuthentication no/" sshd_config
+
+    - name: "reboot du service ssh"
+      shell: systemctl restart ssh
+
+

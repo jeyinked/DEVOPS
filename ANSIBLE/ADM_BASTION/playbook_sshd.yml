@@ -1,0 +1,50 @@
+---
+- name: "[LOG EMAIL]"
+  hosts: [HOST]
+  vars:
+  tasks:
+
+
+    - name: "Backup sshdconfig bastion"
+      shell: cp -pr  /etc/ssh/sshd_config /etc/ssh/sshd_config_backup 
+
+
+    - name: "Activation du PubkeyAuthenticationde no à yes  dans sshd_config"
+      shell: cd /etc/ssh/ && sed -i 's/PubkeyAuthentication no/PubkeyAuthentication yes/' sshd_config
+  
+    - name: "restart service ssh"
+      shell: systemctl restart ssh
+
+
+    - name: "Exportation de ma clé"
+      copy:
+        src:     /etc/ansible/breaking_bastion/ssh-keys/id_rsa.pub
+        dest:    /home/jaguas/
+
+
+    - name: "copie la clé dans authorized_keys"
+      shell: cat /home/jaguas/id_rsa.pub >> /home/jaguas/.ssh/authorized_keys
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#    copy:
+#        src=
+#        dest=
