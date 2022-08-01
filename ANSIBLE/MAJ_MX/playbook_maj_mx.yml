@@ -1,0 +1,33 @@
+---
+- name: "[MAJ MX]"
+  hosts: [MX]
+  tasks:
+
+    - name: Suppression de email.old 
+      shell: cd /home/dqe/email3_old/ && rm -rf *
+    
+    - name: Backup de email dans email.old
+      shell: cd /home/dqe/email3_old/ && cp -pr ../email3/* .
+
+
+    - name: "Copie de la nouvelle version de email"
+      copy:
+        src=/etc/ansible/maj_mx/email_new/email3/
+        dest=/home/dqe/email3/
+
+
+    - name: "Changement / vérification des permissions des fichiers de email"
+      shell: cd /home/dqe/ && chown -R dqe:dqe ./email3/ 
+ 
+    - name: "relance du service email"
+      shell: cd /var/dqe/scripts/ && ./restart_srv_email.sh   
+
+   
+
+
+
+
+
+
+
+
