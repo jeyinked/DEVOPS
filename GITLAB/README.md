@@ -1,3 +1,7 @@
 # GITLAB
 
 GitLab est un logiciel libre de forge basé sur git proposant les fonctionnalités de wiki, un système de suivi des bugs, l’intégration continue et la livraison continue. Développé par GitLab Inc et créé par Dmitriy Zaporozhets et par Valery Sizov, le logiciel est utilisé par plusieurs grandes entreprises informatiques, dont IBM, Sony, le centre de recherche de Jülich, la NASA, Alibaba, Oracle, Invincea, O’Reilly Media, Leibniz Rechenzentrum, le CERN4,5,6, European XFEL, la GNOME Foundation, Boeing, Autodata, SpaceX7 et Altares.
+
+# CONTEXT 
+
+Installation d'un serveur GITLAB dans un context de migration de GOGS à GITLAB.
