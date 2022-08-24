@@ -5,3 +5,7 @@ GitLab est un logiciel libre de forge basé sur git proposant les fonctionnalit�
 # CONTEXT 
 
 Installation d'un serveur GITLAB dans un context de migration de GOGS à GITLAB.
+
+# PREREQUIS 
+
+Serveur Linux (Ubuntu 20.04.4 LTS)
