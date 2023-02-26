@@ -9,5 +9,9 @@
   docker -v
 
 
-# COMMANDES
-
+# COMMANDES  
+  
+  docker -v                         Affiche la version de docker  
+  docker ps                         Affiche les processsus docker  
+  docker ps -a                      Affiches tous les processus docker
+ 
