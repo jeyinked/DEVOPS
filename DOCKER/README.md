@@ -16,6 +16,11 @@
   docker ps -a    -------------->                         Affiches tous les processus docker  
   docker run appli:version     -------------->        Telecharge et lance un conteneur docker  
   ex: docker run nginx:latest  
-  docker run - d appli:version      -------------->   Telecharge et lance un conteneur en redonnant la main sur le systeme  
-  ex: docker run -d nginx:latest 
+  docker run -d appli:version      -------------->   Telecharge et lance un conteneur en redonnant la main sur le systeme  
+  ex: docker run -d nginx:latest  
+  docker run -d --name lenomsouhaité appli:version --------------> L'option --name suivi d'un nom permet de nommé son conteneur  
+  ex: docker run -d --name C1 nginx:latest
+  docker stop id/nomduconteneur  
+  docker start id/nomduconteneur  
+  docker rm -f id/nomduconteneur
  
