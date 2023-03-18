@@ -22,5 +22,8 @@
   [-p 8080:80 pour rediriger un port dans le containeur]  
   
   
-  # CREATION IMAGE & PUSH DOCKER HUB
+  # CREATION IMAGE & PUSH DOCKER HUB  
+  
+    Avoir un compte gitbub et dockerhub.  
+    
   
