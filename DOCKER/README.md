@@ -19,5 +19,8 @@
   docker ps [-a affiches tous les containeurs docker]  
   docker run  
   [- d pour executer le containeur en tache de fond]  
-  [-p 8080:80 pour rediriger un port dans le containeur]
+  [-p 8080:80 pour rediriger un port dans le containeur]  
+  
+  
+  # CREATION IMAGE & PUSH DOCKER HUB
   
