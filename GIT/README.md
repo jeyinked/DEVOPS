@@ -32,6 +32,8 @@ Serveur Linux (kali rolling 2023.01 )
    Dans le repertoire du projet, crée un fichier README.md avec la commande echo "versionduprojet" > README.md  
    Dans le repertoire du projet, faire un git status (cela affiche le status des fichiers et modifications)  
    Dans le repertoire du projet, faire un git add . ( le . permet de tracker tous les fichiers du repertoire), faire un git add nomdufichier pour uniquement traquer un fichier en particulier.  
+   Dans le repertoire du projet, on peut faire un git status pour vérifier les fichiers tracké.  
+   Dans le repertoire du projet, faire un git commit -m "nomducommit" et faire un git status pour voir la modification 
    
 
    
