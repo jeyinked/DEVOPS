@@ -26,4 +26,8 @@ Serveur Linux (kali rolling 2023.01 )
   untracked --> unmodified --> modified --> staged
   
    
- # Principes & commandes de base
+ # Principes & commandes de base   
+
+   Dans le repertoire du projet, faire git init (la commande git init va crée un repetoire .git)  
+   Dans le repertoire du projet, crée un fichier README.md avec la commande echo "versionduprojet" > README.md  
+   
