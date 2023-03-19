@@ -21,7 +21,7 @@ Serveur Linux (kali rolling 2023.01 )
  git-config --list
 
   
-# Les Etapes d'un fichier  
+# Les étapes d'un fichier  
 
   untracked --> unmodified --> modified --> staged
   
