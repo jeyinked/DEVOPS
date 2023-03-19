@@ -23,7 +23,7 @@ Serveur Linux (kali rolling 2023.01 )
   
 # Les Etapes d'un fichier  
 
-  untracked --> unmodifier --> modified --> staged
+  untracked --> unmodified --> modified --> staged
   
    
   
