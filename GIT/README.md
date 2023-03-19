@@ -26,4 +26,4 @@ Serveur Linux (kali rolling 2023.01 )
   untracked --> unmodified --> modified --> staged
   
    
-  
+ # Principes & commandes de base
