@@ -17,8 +17,8 @@ Serveur Linux (kali rolling 2023.01 )
  
  git config --global user.name "jeromeaguas"  
  git config --global user.email "jeromeaguas@gmail.com"  
- git-config --global core.editor vi  
- git-config --list
+ git config --global core.editor vi  
+ git config --list
 
   
 # Les étapes d'un fichier  
