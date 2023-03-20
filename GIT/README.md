@@ -35,7 +35,7 @@ Serveur Linux (kali rolling 2023.01 )
    Dans le repertoire du projet, on peut faire un git status pour vérifier les fichiers tracké.  
    Dans le repertoire du projet, faire un git commit -m "nomducommit" et faire un git status pour voir la modification 
    
-   # Ignorer des fichier  
+   # Ignorer des fichiers  
    Dans le repertoire du projet, faire un touch .gitignore ( et y mettre les noms des fichiers à ignorer , ex: "*.log")  
    Dans le repertoire du projet, faire un git add .gitignore, puis un git commit -m "creation du fichier .gitignore"
    
