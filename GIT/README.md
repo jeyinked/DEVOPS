@@ -36,7 +36,7 @@ Serveur Linux (kali rolling 2023.01 )
    Dans le repertoire du projet, faire un git commit -m "nomducommit" et faire un git status pour voir la modification.  
    Dans le repertoire du projet, faire un git tag -a (anoted) 1.0.0 -m "initial version"  
    Dans le repertoire du projet, faire un git tag pour afficher la version  
-   Dans le repertoire du projet, faire un git show
+   Dans le repertoire du projet, faire un git show 1.0.0(numerodeversion), il affichera des informations comme le dernier commit.
    
    
 
