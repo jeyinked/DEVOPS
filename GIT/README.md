@@ -9,7 +9,7 @@ Serveur Linux (kali rolling 2023.01 )
 
 # INSTALLATION  
 
- apt update && apt upgrade -y
+ apt update && apt upgrade -y  
  apt install git -y
  
 
