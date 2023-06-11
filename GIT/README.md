@@ -39,7 +39,7 @@ Serveur Linux (kali rolling 2023.01 )
  
  La commande git log permet d'afficher les commits.  
  git log  
- git log -p -2
+ git log -p -2  
  git log --pretty=oneline  
  git log --graph
    
