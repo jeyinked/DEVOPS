@@ -29,9 +29,21 @@ Serveur Linux (kali rolling 2023.01 )
   unmodified --> modified = modifier le fichier  
   modified --> stager = git add  
   unmodified --> untracked = git rm  
-  staged -->  unmodified = git commit
+  staged -->  unmodified = git commit  
   
+  Pour ignorer des fichiers, créer un repertoire .gitignore à la racine du projet et y mettre les fichiers à ignorer.  
+  
+  
+  
+ # GIT LOG  
+ 
+ La commande git log permet d'afficher les commits.  
+ git log  
+ git log -p -2
+ git log --pretty=oneline  
+ git log --graph
    
+  
  # Principes & commandes de base  
  
    Les fichiers se trouvant dans un "working directory", une foi modifiés (ils ont le status de "modified files") et validés, il faut les envoyer dans "l'environnement de staging" grace à la commande git add, quand l'ensemble des fichiers du projet sont validés, on doit les transferés dans le repository grace à la commande git commit.
