@@ -26,9 +26,10 @@ Serveur Linux (kali rolling 2023.01 )
   untracked --> unmodified --> modified --> staged
   
   untracked --> stager = git add  
-  unmodifier --> modified = modifier le fichier  
+  unmodified --> modified = modifier le fichier  
   modified --> stager = git add  
-  unmodified --> untracked = git rm
+  unmodified --> untracked = git rm  
+  staged -->  unmodified = git commit
   
    
  # Principes & commandes de base  
