@@ -31,8 +31,10 @@ Serveur Linux (kali rolling 2023.01 )
   unmodified --> untracked = git rm  
   staged -->  unmodified = git commit  
   
-  Pour ignorer des fichiers, créer un repertoire .gitignore à la racine du projet et y mettre les fichiers à ignorer.  
+  Pour ignorer des fichiers, créer un fichier .gitignore à la racine du projet et y mettre par exemple :  
   
+  #ignorer les fichiers de log
+  *.log
   
   
  # GIT LOG  
