@@ -33,7 +33,7 @@ Serveur Linux (kali rolling 2023.01 )
   
   Pour ignorer des fichiers, créer un fichier .gitignore à la racine du projet et y mettre par exemple :  
   
-  #ignorer les fichiers de log
+  #ignorer les fichiers de log  
   *.log
   
   
