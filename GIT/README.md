@@ -18,16 +18,18 @@ Serveur Linux (kali rolling 2023.01 )
  git config --global user.name "jeromeaguas"  
  git config --global user.email "jeromeaguas@gmail.com"  
  git config --global core.editor vi  
- git config --list
-
+ git config --list  
+ git init .  --> Crée un fichier caché qui va stocker les fichiers modifiés
   
 # Les étapes d'un fichier  
 
-  untracked --> unmodified --> modified --> staged
+  
+
+  untracked --> (tracked) unmodified --> modified --> staged
   
   untracked --> stager = git add  
   unmodified --> modified = modifier le fichier  
-  modified --> stager = git add  
+  modified --> staged = git add  
   unmodified --> untracked = git rm  
   staged -->  unmodified = git commit  
   
