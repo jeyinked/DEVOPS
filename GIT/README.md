@@ -19,7 +19,7 @@ Serveur Linux (kali rolling 2023.01 )
  git config --global user.email "jeromeaguas@gmail.com"  
  git config --global core.editor vi  
  git config --list  
- git init .  --> Crée un fichier caché qui va stocker les fichiers modifiés
+ git init .  --> Crée un fichier caché qui va stocker les fichiers modifiés ( l'executer dans le repertoire des fichiers à gité)
   
 # Les étapes d'un fichier  
 
