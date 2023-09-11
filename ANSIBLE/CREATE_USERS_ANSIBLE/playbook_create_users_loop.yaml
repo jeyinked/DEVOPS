@@ -1,0 +1,12 @@
+---
+- name: Creation d'utilisateurs
+  host: localhost
+  tasks:
+    - user: "{{ item.name }} state=present  uuid= "{{ item.uid }}"
+      with_items:
+        - name: jerome
+          uuid: 1010
+        - name: morgane
+          uuid: 1011
+        - name: meryl
+          uuid: 1012
