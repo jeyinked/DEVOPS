@@ -1,0 +1,12 @@
+---
+- name: Vérifie le status du service httpd et envoi email si down
+  hosts: localhost
+  tasks:
+    - command: systemctl status httpd
+      register: result
+    
+    - mail: 
+        to: jeromeaguas@gmail.com
+        subject: Service Alert
+        body: Httpd service is down!
+        when: result.stdout.find('down') !=1
