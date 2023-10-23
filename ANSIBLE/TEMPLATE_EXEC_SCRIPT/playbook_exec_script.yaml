@@ -1,7 +1,0 @@
----
-- name: execution du script
-  hosts: all
-  become: yes
-  tasks:
-    - name: execution du script deploy.sh
-      script: /tmp/script/deploy.sh 
